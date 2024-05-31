@@ -144,7 +144,7 @@ class bc_magnificpopupSettings {
 
 	public function load_magnificpopup(){
         wp_enqueue_script( 'magnificpopup-dist-scripts', plugin_dir_url( DIR_COMPONENT .  '/bweb_component_functions/' ) . 'magnific-popup/assets/jquery.magnific-popup.min.js', array( 'jquery' ),'', true );
-
+		wp_enqueue_style( 'magnificpopup-css',  plugin_dir_url( DIR_COMPONENT .  '/bweb_component_functions/' ) . 'magnific-popup/assets/magnific-popup.css');
         if( isset( $this->magnificpopup_settings_options['script_magnificpopup'] )){
             wp_register_script( 'magnificpopup-scripts', '', array("jquery"), '', true );
             wp_enqueue_script( 'magnificpopup-scripts'  );
